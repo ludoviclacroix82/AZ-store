@@ -1,0 +1,83 @@
+// reset.scss
+
+// Réinitialisation globale
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Réinitialisation des éléments de bloc
+html,body,div,article,section,main,aside,nav,header,footer,address,blockquote,figure,figcaption,h1, h2, h3, h4, h5, h6,p,pre,ul,ol,li,dl,dt,dd,table,caption,tbody,thead,tfoot,tr,th,td,fieldset,legend,form,button,input,textarea,select,optgroup,option {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+// Réinitialisation des éléments typographiques
+body {
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+// Réinitialisation des éléments de liste
+ul,ol {
+  list-style: none;
+}
+
+// Réinitialisation des éléments de média
+img,video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Réinitialisation des éléments d'interaction
+button,input,select,textarea {
+  background-color: transparent;
+  appearance: none;
+  border-radius: 0;
+  outline: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Réinitialisation des éléments de formulaire
+button,input[type="button"],input[type="reset"],input[type="submit"],input[type="number"],input[type="email"],input[type="search"],input[type="tel"],input[type="url"],input[type="password"],input[type="checkbox"],input[type="radio"],select,textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// Réinitialisation des éléments sémantiques
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+// Réinitialisation des éléments interactifs
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover,  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// Réinitialisation des éléments de préformatage
+pre {
+  white-space: pre-wrap;
+}
+
+// Réinitialisation des éléments non visuels
+template {
+  display: none;
+}
+
+// Réinitialisation des éléments masqués
+[hidden] {
+  display: none !important;
+}

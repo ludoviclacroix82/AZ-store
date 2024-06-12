@@ -1,0 +1,9 @@
+@import "abstracts/__abstracts_dir";
+@import "base/__base_dir";
+@import "components/__componemts_dir";
+@import "layouts/__layouts_dir";
+
+body {
+    background: $backgroundColorLinearGardien;
+    font-size: 16px;
+}
