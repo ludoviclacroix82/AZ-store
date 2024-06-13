@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .header-row {
+.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #main-cart #cart .items .list .quantity .add input {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
-.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title {
+.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title, #main-cart #cart .items h2, #main-cart #cart .items .list .name-porduct {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -523,7 +523,11 @@ header {
   flex-direction: column;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  transition: right 0.8s ease-in; }
+  transition: right 0.8s ease-in;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75); }
   .cart-mini .cart-header {
     width: 100%;
     height: 10%;
@@ -598,9 +602,15 @@ header {
         .cart-mini .cart-content .cart-item .tools-content .add {
           display: flex;
           flex-direction: row;
-          width: 60px; }
+          width: 40px;
+          height: 30px; }
           .cart-mini .cart-content .cart-item .tools-content .add input {
-            width: 20px; }
+            width: 20px;
+            font-size: 0.8rem; }
+          .cart-mini .cart-content .cart-item .tools-content .add input[type=button] {
+            cursor: pointer; }
+          .cart-mini .cart-content .cart-item .tools-content .add input[type=text] {
+            width: 10px !important; }
   .cart-mini .rising .subtotal, .cart-mini .rising .shipping, .cart-mini .rising .total {
     width: 90%;
     display: flex;
@@ -759,32 +769,78 @@ header {
   #main-cart #cart {
     flex-direction: row;
     justify-content: center; }
+    #main-cart #cart .items .header .row, #main-cart #cart .items .list .row {
+      width: 15%;
+      color: #7e7e7e;
+      font-size: 0.6rem;
+      line-height: 0.8rem;
+      letter-spacing: 0.1rem;
+      text-align: center; }
+    #main-cart #cart .items .header .name-porduct, #main-cart #cart .items .list .name-porduct {
+      width: 45% !important;
+      display: flex;
+      justify-content: start; }
+    #main-cart #cart .items .header .delete, #main-cart #cart .items .list .delete {
+      width: 5% !important; }
+    #main-cart #cart .items .header .total, #main-cart #cart .items .list .total {
+      width: 10% !important; }
     #main-cart #cart .items {
-      width: 90%;
+      width: 60%;
       min-height: 600px;
       margin-top: 80px;
       display: flex;
       flex-direction: column;
       align-items: center; }
+      #main-cart #cart .items h2 {
+        width: 100%;
+        text-align: left;
+        padding: 30px 0px;
+        font-size: 1.5rem; }
       #main-cart #cart .items .header {
         width: 100%;
-        height: 40px;
+        height: 20px;
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid #ccc; }
-        #main-cart #cart .items .header .header-row {
-          width: 15%;
-          color: #7e7e7e;
-          font-size: 0.6rem;
-          line-height: 0.8rem;
-          letter-spacing: 0.1rem;
-          text-align: center; }
-        #main-cart #cart .items .header .name-porduct {
-          width: 30% !important; }
-        #main-cart #cart .items .header .delete {
-          width: 5% !important; }
-        #main-cart #cart .items .header .total {
-          width: 5% !important; }
+      #main-cart #cart .items .list {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc;
+        align-items: center; }
+        #main-cart #cart .items .list .row {
+          font-size: 0.9rem; }
+        #main-cart #cart .items .list .product {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #main-cart #cart .items .list .product img {
+            width: 40%;
+            height: 40%;
+            object-fit: cover; }
+        #main-cart #cart .items .list .name-porduct {
+          color: #3779e8;
+          font-size: 0.9rem;
+          justify-content: normal;
+          height: 100%;
+          padding: 20px; }
+        #main-cart #cart .items .list .quantity {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          #main-cart #cart .items .list .quantity .disabled {
+            display: none; }
+          #main-cart #cart .items .list .quantity .add {
+            display: flex;
+            flex-direction: row;
+            width: 60px; }
+            #main-cart #cart .items .list .quantity .add input {
+              width: 20px;
+              height: 40px;
+              font-size: 0.9rem; }
+            #main-cart #cart .items .list .quantity .add input[type=button] {
+              cursor: pointer; }
     #main-cart #cart aside {
       width: 30%; }
 

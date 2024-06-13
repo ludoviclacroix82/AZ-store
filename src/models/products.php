@@ -1,5 +1,5 @@
 <?php
-$urlJson = $_SERVER['DOCUMENT_ROOT'].'/assets/json/products.json';
+$urlJson = $_SERVER['DOCUMENT_ROOT'] . '/assets/json/products.json';
 
 
 /**
@@ -98,18 +98,71 @@ function displayCartMini()
                                 <input id="result" type="texte" value="{$value}" maxlength="2" min='0' max='99' />
                                 <input id="more" type="button" value="+" />
                             </div>
-                        </div>
                         </form>
+                        </div>
                     </div>
                 </div>
                 HTML;
             }
-        $_SESSION['subTotal'] = $subTotal;
-        $_SESSION['shippingTotal'] = $shipping;
+            $_SESSION['subTotal'] = $subTotal;
+            $_SESSION['shippingTotal'] = $shipping;
         } else {
             echo 'aucun articles';
         }
-        
+    } catch (\JsonException $exception) {
+        echo $exception->getMessage(); // echoes "Syntax error" 
+    }
+}
+
+
+function displayCart()
+{
+
+    global $urlJson;
+    $myCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : '';
+
+    try {
+        $productsJson = file_get_contents($urlJson);
+        $products = json_decode($productsJson, true);
+
+        if (isset($_SESSION['cart'])) {
+
+            foreach ($myCart as $key => $value) {                
+
+                $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
+                $itemTotal = $value *$products[$itemPosition]['price'];
+
+                echo <<<HTML
+                <div class="list" id="{$products[$itemPosition]['id']}">
+                    <div class="row product">
+                        <img src="{$products[$itemPosition]['image_url']}" alt="{$products[$itemPosition]['product']}" >
+                    </div>
+                    <div class="row name-porduct">{$products[$itemPosition]['product']}</div>
+                    <div class="row price">{$products[$itemPosition]['price']} €</div>
+                    <div class="row quantity ">
+                        <form method="post" action="/src/controllers/add-item.php" id="fromMiniCart#{$products[$itemPosition]['id']}">
+                            <input class="disabled" type="number" name="idItem" id="IdItem" value="{$products[$itemPosition]['id']}">
+                            <input class="disabled" type="text" name="spam" id="spam">
+                            <input class="disabled" type="number" name="qt" id="qt" value=''>
+                            <div class="add">
+                                <input id="less" type="button" value="-" />
+                                <input id="result" type="texte" value="{$value}" maxlength="2" min='0' max='99' />
+                                <input id="more" type="button" value="+" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row delete">
+                        <a href="/src/controllers/delete-item.php?id={$products[$itemPosition]['id']}">
+                            <img src="/assets/images/icones/trash.svg" alt="Delete">
+                        </a>  
+                    </div>
+                    <div class="row total">$itemTotal €</div>
+                </div>
+                HTML;
+            }
+        } else {
+            echo 'aucun articles';
+        }
     } catch (\JsonException $exception) {
         echo $exception->getMessage(); // echoes "Syntax error" 
     }

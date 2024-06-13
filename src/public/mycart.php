@@ -17,31 +17,25 @@ session_start();
     require('../views/menu.php');
     require('../models/products.php');
     ?>
-    <main id='main-cart' >
+    <main id='main-cart'>
         <?php require('../models/cart-mini.php'); ?>
         <section id="cart">
-        <div class="items">
-            <div class="header">
-                <div class="header-row product">item</div>
-                <div class="header-row name-porduct">product name</div>
-                <div class="header-row price">price</div>
-                <div class="header-row quanity">quantity</div>
-                <div class="header-row delete"></div>
-                <div class="header-row total">total</div>
+            <div class="items">
+                <h2>Order Summary</h2>
+                <div class="header">
+                    <div class="row product">item</div>
+                    <div class="row name-porduct">product name</div>
+                    <div class="row price">price</div>
+                    <div class="row quantity">quantity</div>
+                    <div class="row delete"></div>
+                    <div class="row total">total</div>
+                </div>
+                <?php echo displayCart(); ?>
             </div>
-            <div class="list">
-                <div class="header-row product">item</div>
-                <div class="header-row name-porduct">product name</div>
-                <div class="header-row price">price</div>
-                <div class="header-row quanity">quantity</div>
-                <div class="header-row delete"></div>
-                <div class="header-row total">total</div>
-            </div>
-        </div>
-        <aside>
+            <aside>
 
-        </aside>
-    </section>
+            </aside>
+        </section>
     </main>
     <?php
     require('../views/footer.php')

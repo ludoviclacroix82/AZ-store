@@ -1,6 +1,7 @@
 <?php
 session_start();
 //var_dump($_POST);
+$url = $_SERVER['HTTP_REFERER']; // url page precedent
 $captcha = isset($_POST['spam']) ? htmlspecialchars(trim($_POST['spam'])) : '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $captcha === '') {
@@ -27,13 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $captcha === '') {
            
 
     echo $quantity;
-    header("Location: ../../index.php");
+    header("Location: {$url}");
     $_SESSION['addItem'] = 'true';
 
     //print_r($_SESSION['cart']);
     exit();
 } else {
-    header("Location: ../../index.php");
+    header("Location: {$url}");
     $_SESSION['addItem'] = 'false';
     exit();
 }
