@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script type="module" src="./assets/js/script.js" defer></script>
     <title>Az-Store</title>
 </head>
 
 <body>
     <?php
-    require('./menu.php')
+    require('./src/views/menu.php');
+    require_once('./src/models/products.php');
     ?>
     <header>
         <div class="wrap">
@@ -27,43 +32,20 @@
         </div>
     </header>
     <main>
+        <?php require('./src/models/cart-mini.php');?>
         <section id="last-products">
             <div class="wrap">
                 <h3><span>our</span> last products</h3>
                 <div class="items">
                     <?php
-                    try {
-                        $productsJson = file_get_contents('./assets/json/products.json');
-                        $products = json_decode($productsJson, true);
-
-                        foreach ($products as $product) {
-                    ?>
-                            <div class="item" id="<?php echo $product['id'];  ?>">
-                                <div class="item-image">
-                                    <img src="<?php echo $product['image_url'];  ?>" alt="">
-                                </div>
-                                <div class="item-content">
-                                    <div class="item-info">
-                                        <h3><?php echo $product['product'];  ?></h3>
-                                        <?php echo $product['price'];  ?>€
-                                    </div>
-                                    <div class="button">
-                                        <button>add to card</button>
-                                    </div>
-                                </div>
-                            </div>
-                    <?php
-                        }
-                    } catch (\JsonException $exception) {
-                        echo $exception->getMessage(); // echoes "Syntax error" 
-                    }
+                    displayProducts();
                     ?>
                 </div>
             </div>
         </section>
     </main>
     <?php
-    require('./footer.php')
+    require('./src/views/footer.php')
     ?>
 </body>
 

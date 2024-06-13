@@ -1,3 +1,8 @@
+<?php 
+
+$nbrItem = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+?>
+
 <nav>
     <div class="logo">
         <h2>AZ[strore]</h2>
@@ -10,6 +15,12 @@
     </div>
     <div class="tools">
         <div class="tools-cart">
+            <?php 
+                if($nbrItem >0 )
+                    echo '<div class="item-number">'.$nbrItem.'</div>'
+                
+            ?>
+            
             <a href="">
                 <img src="./assets/images/icones/shopping-cart.svg" alt="Shopping Cart">
             </a>
