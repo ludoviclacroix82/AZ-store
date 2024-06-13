@@ -47,6 +47,8 @@ function displayCartMini()
     global $urlJson;
     $myCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : '';
     $subTotal = 0;
+    $shipping = 0;
+    $priceShippinItem = 5;
 
     try {
         $productsJson = file_get_contents($urlJson);
@@ -58,6 +60,8 @@ function displayCartMini()
 
                 $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
                 $subTotal += $value * $products[$itemPosition]['price'];
+                $shipping += $value * $priceShippinItem;
+
                 echo <<<HTML
                 <div class="cart-item" id="{$products[$itemPosition]['id']}">
                     <div class="cart-image">
@@ -69,7 +73,9 @@ function displayCartMini()
                     </div>
                     <div class="cart-tools">
                         <div class="close">
-                            <img src="../../assets/images/icones/trash.svg" alt="Delete">
+                            <a href="./src/controllers/delete-item.php?id={$products[$itemPosition]['id']}">
+                                <img src="../../assets/images/icones/trash.svg" alt="Delete">
+                             </a>
                         </div>
                         <div class="tools-content">
                         <form method="post" action="./src/controllers/add-item.php" id="fromMiniCart#{$products[$itemPosition]['id']}">
@@ -91,6 +97,8 @@ function displayCartMini()
             echo 'aucun articles';
         }
         $_SESSION['subTotal'] = $subTotal;
+        $_SESSION['shippingTotal'] = $shipping;
+        
     } catch (\JsonException $exception) {
         echo $exception->getMessage(); // echoes "Syntax error" 
     }

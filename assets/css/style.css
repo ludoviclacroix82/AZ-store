@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, #last-products .wrap .items .item .item-content {
+.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
-.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, #last-products .wrap .items .item .item-content .item-info h3 {
+.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -568,6 +568,31 @@ header {
           width: 60px; }
           .cart-mini .cart-content .cart-item .tools-content .add input {
             width: 20px; }
+  .cart-mini .rising .subtotal, .cart-mini .rising .shipping, .cart-mini .rising .total {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px; }
+    .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4 {
+      width: 70%;
+      color: #3779e8;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem; }
+      .cart-mini .rising .subtotal h4:first-letter, .cart-mini .rising .shipping h4:first-letter, .cart-mini .rising .total h4:first-letter {
+        text-transform: capitalize; }
+    .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span {
+      width: 30%;
+      text-align: right;
+      color: #111827;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem; }
+  .cart-mini .rising {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
 
 #last-products .wrap {
   width: 80%; }
