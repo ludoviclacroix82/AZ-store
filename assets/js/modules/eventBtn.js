@@ -41,7 +41,7 @@ export const changeQuantity = () => {
             event.preventDefault()
             const elemParent = event.target.parentNode
             const from = elemParent.parentNode
-            console.log(from);
+            //onsole.log(from);
             if (resultValue > 0 && resultValue < 99) {
                 resultValue -= 1
                 result.value = resultValue

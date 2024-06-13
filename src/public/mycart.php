@@ -29,6 +29,14 @@ session_start();
                 <div class="header-row delete"></div>
                 <div class="header-row total">total</div>
             </div>
+            <div class="list">
+                <div class="header-row product">item</div>
+                <div class="header-row name-porduct">product name</div>
+                <div class="header-row price">price</div>
+                <div class="header-row quanity">quantity</div>
+                <div class="header-row delete"></div>
+                <div class="header-row total">total</div>
+            </div>
         </div>
         <aside>
 
