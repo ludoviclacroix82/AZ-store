@@ -4,14 +4,12 @@ $subtotal = isset($_SESSION['subTotal']) ? ($_SESSION['subTotal']) : 0;
 $shipping = isset($_SESSION['shippingTotal'] ) ? ($_SESSION['shippingTotal']) : 0;
 $total = floatval($subtotal) + floatval($shipping);
 
-
-
 ?>
 <div class="cart-mini">
     <div class="cart-header">
         <div class="header-title">My cart</div>
         <div class="header-close">
-            <img src="../../assets/images/icones/arrow-right.svg" alt="Close" id="closeMiniCart">
+            <img src="/assets/images/icones/arrow-right.svg" alt="Close" id="closeMiniCart">
         </div>
     </div>
     <div class="cart-content">
@@ -32,7 +30,7 @@ $total = floatval($subtotal) + floatval($shipping);
         </div>
     </div>
     <div class="button">
-        <a href="">
+        <a href="../src/public/mycart.php">
             <button>go to cart</button>
         </a>
     </div>

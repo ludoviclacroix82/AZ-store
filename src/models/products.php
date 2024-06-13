@@ -1,5 +1,5 @@
 <?php
-$urlJson = './assets/json/products.json';
+$urlJson = $_SERVER['DOCUMENT_ROOT'].'/assets/json/products.json';
 
 
 /**
@@ -84,12 +84,12 @@ function displayCartMini()
                     </div>
                     <div class="cart-tools">
                         <div class="close">
-                            <a href="./src/controllers/delete-item.php?id={$products[$itemPosition]['id']}">
-                                <img src="../../assets/images/icones/trash.svg" alt="Delete">
+                            <a href="/src/controllers/delete-item.php?id={$products[$itemPosition]['id']}">
+                                <img src="/assets/images/icones/trash.svg" alt="Delete">
                              </a>
                         </div>
                         <div class="tools-content">
-                        <form method="post" action="./src/controllers/add-item.php" id="fromMiniCart#{$products[$itemPosition]['id']}">
+                        <form method="post" action="/src/controllers/add-item.php" id="fromMiniCart#{$products[$itemPosition]['id']}">
                             <input class="disabled" type="number" name="idItem" id="IdItem" value="{$products[$itemPosition]['id']}">
                             <input class="disabled" type="text" name="spam" id="spam">
                             <input class="disabled" type="number" name="qt" id="qt" value=''>

@@ -1,11 +1,10 @@
 
-import { setItem ,getItem } from "./localstorage.js";
+import { setItem ,getItem } from "/assets/js/modules/localstorage.js";
 
 export const addItem = () => {
     const items = document.querySelectorAll('.item')
 
     for (const item of items) {
-
         const itemBtn = item.querySelector('button')
 
         itemBtn.addEventListener("click", event => {

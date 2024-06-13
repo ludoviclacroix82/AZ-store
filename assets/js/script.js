@@ -1,4 +1,4 @@
-import { addItem, changeQuantity, openCart } from "./modules/eventBtn.js";
+import { addItem, changeQuantity, openCart } from "/assets/js/modules/eventBtn.js";
 
 addItem()
 changeQuantity()

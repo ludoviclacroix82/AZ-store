@@ -3,48 +3,48 @@
       "id": 1,
       "product": "Nike air force 1 sneakers",
       "price": 140,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 2,
       "product": "Nike Air Max",
       "price": 150,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 3,
       "product": "Nike Dunk Skateboarding",
       "price": 130,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 4,
       "product": "Nike Dunk Skateboarding",
       "price": 130,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 5,
       "product": "Nike Air Jordan Max",
       "price": 160,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 6,
       "product": "Air Jordan Sneakers",
       "price": 170,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 7,
       "product": "Basketball Sneakers",
       "price": 120,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     },
     {
       "id": 8,
       "product": "Nike Skate Shoe One Purple",
       "price": 135,
-      "image_url": "./assets/images/products/shoe_two.png"
+      "image_url": "/assets/images/products/shoe_two.png"
     }
   ]

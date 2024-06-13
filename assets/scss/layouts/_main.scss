@@ -19,10 +19,12 @@
         }
     }
 }
-.open-cart-mini{
-    right:0px !important;
+
+.open-cart-mini {
+    right: 0px !important;
     transition: right 0.8s ease-in;
 }
+
 .cart-mini {
     //display: none;
     z-index: 6;
@@ -61,13 +63,14 @@
             width: 50%;
             text-align: right;
             padding: 5px 15px;
-            display:flex;
+            display: flex;
             justify-content: end;
-            img{
+
+            img {
                 cursor: pointer;
                 display: block;
             }
-            
+
         }
     }
 
@@ -165,7 +168,8 @@
             color: $primaryColorText;
             font-size: 0.9rem;
             letter-spacing: 0.05rem;
-            &:first-letter{
+
+            &:first-letter {
                 text-transform: capitalize;
             }
 
@@ -191,14 +195,17 @@
         .subtotal {
             @extend %rising;
         }
+
         .shipping {
             @extend %rising;
         }
+
         .total {
             @extend %rising;
         }
     }
-    .button{
+
+    .button {
         width: 95%;
         display: flex;
         justify-content: right;
@@ -288,6 +295,160 @@
                     }
                 }
             }
+        }
+    }
+}
+
+#best-quality {
+    @extend %section;
+
+    .wrap {
+        margin-top: 50px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 40%;
+            }
+        }
+
+        .title {
+            @extend .poppins-semibold;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 3rem;
+            line-height: 3rem;
+            letter-spacing: 0.1rem;
+
+            span {
+                color: $primaryColorText;
+            }
+        }
+
+        .info {
+            width: 50%;
+            @extend .poppins-regular;
+            color: $bestQualitycolorText;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+#testimonials {
+    @extend %section;
+    margin: 50px auto;
+
+    .cards {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        .card-user {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 25%;
+                height: 25%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .card-name {
+            @extend .poppins-regular;
+            color: $secondaryColorText;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            padding: 10px 0px;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+
+        .card-content {
+            @extend .poppins-regular;
+            color: $bestQualitycolorText;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+#main-cart {
+    background-color: $secondaryColor;
+
+    #cart {
+        @extend %section;
+        flex-direction: row;
+        justify-content: center;
+
+        .items {
+            width: 90%;
+            min-height: 600px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .header {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ccc;
+
+                .header-row {
+                    @extend .poppins-regular;
+                    width: 15%;
+                    color: $bestQualitycolorText;
+                    font-size: 0.6rem;
+                    line-height: 0.8rem;
+                    letter-spacing: 0.1rem;
+                    text-align: center;
+                }
+                .name-porduct{
+                    width: 30% !important;
+                }
+                .delete{
+                    width: 5% !important;
+                }
+                .total{
+                    width: 5% !important;
+                }
+
+            }
+
+
+
+        }
+
+        aside {
+            width: 30%;
         }
     }
 }

@@ -8,7 +8,7 @@ if(isset($_GET['id']) && isset($_SESSION['cart'])){
 
     header("Location: ../../index.php");
     $_SESSION['DeleteItem'] = 'true';
-
+    exit();
 }
 
 ?>
