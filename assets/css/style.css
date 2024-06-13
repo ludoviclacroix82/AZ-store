@@ -399,7 +399,9 @@ nav {
       nav .tools .tools-cart img {
         width: 24px;
         height: 24px;
-        filter: invert(1); }
+        filter: invert(1);
+        display: block;
+        cursor: pointer; }
       nav .tools .tools-cart .item-number {
         z-index: 5;
         display: flex;
@@ -410,7 +412,7 @@ nav {
         width: 15px;
         height: 15px;
         position: absolute;
-        top: 10px;
+        top: 5px;
         background-color: #3779e8;
         border-radius: 50px;
         padding: 8px; }
@@ -482,18 +484,23 @@ header {
     #last-products h3 span {
       color: #3779e8; }
 
+.open-cart-mini {
+  right: 0px !important;
+  transition: right 0.8s ease-in; }
+
 .cart-mini {
   z-index: 6;
   position: fixed;
   top: 50px;
-  right: 0;
+  right: -355px;
   width: 350px;
   height: 90%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; }
+  border-bottom-left-radius: 10px;
+  transition: right 0.8s ease-in; }
   .cart-mini .cart-header {
     width: 100%;
     height: 10%;
@@ -514,6 +521,9 @@ header {
       padding: 5px 15px;
       display: flex;
       justify-content: end; }
+      .cart-mini .cart-header .header-close img {
+        cursor: pointer;
+        display: block; }
   .cart-mini .cart-content {
     width: 100%;
     height: 70%;
@@ -593,6 +603,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+  .cart-mini .button {
+    width: 95%;
+    display: flex;
+    justify-content: right;
+    margin-top: 10px; }
 
 #last-products .wrap {
   width: 80%; }

@@ -1,4 +1,5 @@
-import { addItem, changeQuantity } from "./modules/eventBtn.js";
+import { addItem, changeQuantity, openCart } from "./modules/eventBtn.js";
 
-addItem();
+addItem()
 changeQuantity()
+openCart()

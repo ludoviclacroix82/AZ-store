@@ -11,7 +11,7 @@ $total = floatval($subtotal) + floatval($shipping);
     <div class="cart-header">
         <div class="header-title">My cart</div>
         <div class="header-close">
-            <img src="../../assets/images/icones/arrow-right.svg" alt="" srcset="">
+            <img src="../../assets/images/icones/arrow-right.svg" alt="Close" id="closeMiniCart">
         </div>
     </div>
     <div class="cart-content">

@@ -11,19 +11,16 @@ $nbrItem = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Products</a>
+        <a href="">My cart</a>
         <a href="">Contact</a>
     </div>
     <div class="tools">
         <div class="tools-cart">
             <?php 
                 if($nbrItem >0 )
-                    echo '<div class="item-number">'.$nbrItem.'</div>'
-                
-            ?>
-            
-            <a href="">
-                <img src="./assets/images/icones/shopping-cart.svg" alt="Shopping Cart">
-            </a>
+                    echo '<div class="item-number">'.$nbrItem.'</div>'                
+            ?>            
+                <img src="./assets/images/icones/shopping-cart.svg" alt="Shopping Cart" id="openCart">
         </div>
         <div class="tools-login">
             <a href="./login">Login</a>

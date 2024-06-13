@@ -2,6 +2,11 @@
 $urlJson = './assets/json/products.json';
 
 
+/**
+ * displayProducts
+ * Affiche les Items via le json
+ * @return void
+ */
 function displayProducts()
 {
     global $urlJson;
@@ -41,6 +46,12 @@ function displayProducts()
     }
 }
 
+
+/**
+ * displayCartMini
+ * Affiche les items dans le panier
+ * @return void
+ */
 function displayCartMini()
 {
 
@@ -93,11 +104,11 @@ function displayCartMini()
                 </div>
                 HTML;
             }
+        $_SESSION['subTotal'] = $subTotal;
+        $_SESSION['shippingTotal'] = $shipping;
         } else {
             echo 'aucun articles';
         }
-        $_SESSION['subTotal'] = $subTotal;
-        $_SESSION['shippingTotal'] = $shipping;
         
     } catch (\JsonException $exception) {
         echo $exception->getMessage(); // echoes "Syntax error" 

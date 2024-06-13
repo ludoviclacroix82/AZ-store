@@ -1,4 +1,6 @@
 
+import { setItem ,getItem } from "./localstorage.js";
+
 export const addItem = () => {
     const items = document.querySelectorAll('.item')
 
@@ -34,7 +36,7 @@ export const changeQuantity = () => {
 
         let resultValue = parseInt(result.value)
 
-       
+
 
         less.addEventListener('click', event => {
             event.preventDefault()
@@ -62,4 +64,33 @@ export const changeQuantity = () => {
             }
         });
     }
+}
+
+export const openCart = () => {
+    const nav = document.querySelector('nav')
+    const cartMini = document.querySelector('.cart-mini')
+    const btnCart = nav.querySelector('#openCart')
+    const closeMiniCart = cartMini.querySelector('#closeMiniCart')
+
+    console.log(cartMini);
+    const openCartStorage = getItem('openCart')
+
+    if (openCartStorage === true)
+        cartMini.classList.add('open-cart-mini')
+    else
+        cartMini.classList.remove('open-cart-mini')
+
+    const openCartMiniEvent = () =>{
+
+        if (cartMini.classList.contains('open-cart-mini')) {
+            cartMini.classList.remove('open-cart-mini')
+            setItem('openCart', false)
+        } else {
+            cartMini.classList.add('open-cart-mini')
+            setItem('openCart', true)
+        }
+    }    
+
+    btnCart.addEventListener('click', openCartMiniEvent);
+    closeMiniCart.addEventListener('click', openCartMiniEvent);
 }

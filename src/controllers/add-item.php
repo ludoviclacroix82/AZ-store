@@ -1,32 +1,39 @@
 <?php
 session_start();
-var_dump($_POST);
+//var_dump($_POST);
 $captcha = isset($_POST['spam']) ? htmlspecialchars(trim($_POST['spam'])) : '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $captcha === '') {
 
     $idItem = isset($_POST['idItem']) ? htmlspecialchars(trim($_POST['idItem'])) : '';
     $qt = isset($_POST['qt']) ? htmlspecialchars(trim($_POST['qt'])) : '';
+    $quantity = $qt;
 
-    //echo $idItem . '//' . $qt;
 
-
-    if (isset($_SESSION['cart']) && isset( $_SESSION['cart'][$idItem])) {
+    if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$idItem])) {
+        
         $_SESSION['cart'][$idItem] += intval($qt);
+        $quantity  = $_SESSION['cart'][$idItem];
+
     } else {
 
         $_SESSION['cart'][$idItem] =  intval($qt);
     }
-    echo 'quantite:'.intval($qt);
+
+   if ($quantity <= 0  && isset($_SESSION['cart'][$idItem])){
+         header("Location: ../../src/controllers/delete-item.php?id={$idItem}");
+         exit();
+    }
+           
+
+    echo $quantity;
     header("Location: ../../index.php");
     $_SESSION['addItem'] = 'true';
-    
-    print_r($_SESSION['cart']);
+
+    //print_r($_SESSION['cart']);
     exit();
 } else {
     header("Location: ../../index.php");
     $_SESSION['addItem'] = 'false';
     exit();
 }
-
-

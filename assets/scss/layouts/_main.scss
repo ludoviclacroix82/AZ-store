@@ -19,12 +19,16 @@
         }
     }
 }
-
+.open-cart-mini{
+    right:0px !important;
+    transition: right 0.8s ease-in;
+}
 .cart-mini {
+    //display: none;
     z-index: 6;
     position: fixed;
     top: 50px;
-    right: 0;
+    right: -355px;
     width: 350px;
     height: 90%;
     background-color: $cartMiniBg;
@@ -32,6 +36,7 @@
     flex-direction: column;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    transition: right 0.8s ease-in;
 
     .cart-header {
         width: 100%;
@@ -56,8 +61,13 @@
             width: 50%;
             text-align: right;
             padding: 5px 15px;
-            display: flex;
+            display:flex;
             justify-content: end;
+            img{
+                cursor: pointer;
+                display: block;
+            }
+            
         }
     }
 
@@ -187,6 +197,12 @@
         .total {
             @extend %rising;
         }
+    }
+    .button{
+        width: 95%;
+        display: flex;
+        justify-content: right;
+        margin-top: 10px;
     }
 }
 
