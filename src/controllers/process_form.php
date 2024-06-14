@@ -1,5 +1,13 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require '../../assets/vendor/PHPMailer/src/Exception.php';
+require '../../assets/vendor/PHPMailer/src/PHPMailer.php';
+require '../../assets/vendor/PHPMailer/src/SMTP.php';
+
 var_dump($_POST);
 $url = $_SERVER['HTTP_REFERER']; // url page precedent
 
@@ -10,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //récuperation des data Post
     $gender = htmlspecialchars(trim($_POST['gender']));
-    $genderSend = ($gender === 'noreply')?'':$gender; // Si le user n'a pas voulu mettre son genre 
+    $genderSend = ($gender === 'noreply') ? '' : $gender; // Si le user n'a pas voulu mettre son genre 
 
     $captcha = isset($_POST['website']) ? htmlspecialchars(trim($_POST['website'])) : '';
     $gender = isset($_POST['gender']) ? htmlspecialchars(trim($_POST['gender'])) : '';
@@ -24,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    
+
     $_SESSION['gender'] = $gender;
     $_SESSION['name'] = $name;
     $_SESSION['lastName'] = $lastName;
@@ -46,9 +54,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($error === 0 && $captcha === '') {
-
+        // Initialisation de l'objet PHPMailer
+        $mail = new PHPMailer(true);
         try {
-  
+            //Server settings
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->isSMTP();
+            $mail->Host = 'smtp.office365.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'lac_ludo@hotmail.com';
+            $mail->Password = '';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            // Destinataires
+            $mail->setFrom('lac_ludo@hotmail.com', 'support AzStore');
+            $mail->addAddress('lac_ludo@hotmail.com', 'support Hackeur Poulettes');
+            $mail->addAddress($email, $name . ' ' . $lastName);
+
+
+            // Contenu de l'email
+            $mail->isHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body = $genderSend . ' ' . $name . ' ' . $lastName . ' from:' . $country . '<br><br>' . $message;
+
+            //$mail->send();
+            $_SESSION['sendMail'] = 'send';
+
+            // destroye $_Session
+            unset($_SESSION['cart']);
+            
+            header("Location: $url");
         } catch (Exception $e) {
             //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             $_SESSION['sendMail'] = 'noSend';
@@ -72,6 +108,7 @@ function checkEmail(string $email)
         return 1;
     } else {
         $_SESSION['errorEmail'] = '';
+        return 0;
     }
 }
 
@@ -82,9 +119,6 @@ function issetInput(string $input, string $session, string $errorSession, string
         return 1;
     } else {
         $_SESSION[$errorSession] = '';
+        return 0;
     }
 }
-
-
-
-?>

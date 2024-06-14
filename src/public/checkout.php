@@ -96,9 +96,9 @@ $arrayGender = array(
                 if (!empty($_SESSION['sendMail'])) {
 
                     if ($_SESSION['sendMail'] === 'send') {
-                        echo '<div class="alert alert-success" role="alert">Your email has been successfully sent, and a copy has been sent to you at the address <b>' . $_SESSION['email'] . '</b></div>';
+                        echo '<div class="alert alert-success" role="alert">Your order has been successfully shipped! You will soon receive an email (<b>' . $_SESSION['email'] . '</b>) with the tracking details.<br>Thank you for your purchase.</div>';
                         //session_destroy();
-                        header("Refresh: $delai;url=$url");
+                        //header("Refresh: $delai;url=$url");
                     }
                     if ($_SESSION['sendMail'] === 'noSend') {
                         echo '<div class="alert alert-danger" role="alert">Message could not be sent.</div>';
@@ -151,9 +151,12 @@ $arrayGender = array(
                             <div class="adress">
                                 <input type="text" name="adress" id="adress" aria-label="Your adress" placeholder="adress" value="<?php echo (!empty($_SESSION['adress'])) ? $_SESSION['adress'] : ''; ?>">
                             </div>
+                            <div class="adress">
+                                <input type="text" name="country" id="country" aria-label="Your coutry" placeholder="coutry" value="<?php echo (!empty($_SESSION['country'])) ? $_SESSION['country'] : ''; ?>">
+                            </div>
                             <div class="error">
                                 <?php
-                                echo (!empty($_SESSION['errorAdress']) || !empty($_SESSION['errorZip']) || !empty($_SESSION['errorCity'])) ? $_SESSION['errorZip'] . '<br>' . $_SESSION['errorCity']  . '<br>' . $_SESSION['errorAdress'] : ''; ?>
+                                echo (!empty($_SESSION['errorAdress']) || !empty($_SESSION['errorZip']) || !empty($_SESSION['errorCity']) || !empty($_SESSION['errorCountry'])) ? $_SESSION['errorZip'] . ' ' . $_SESSION['errorCity']  . ' ' . $_SESSION['errorAdress'] . '  ' . $_SESSION['errorCountry'] : ''; ?>
                             </div>
                             <div class="form-group">
                                 <input id="website" name="website" type="text" value="" />
