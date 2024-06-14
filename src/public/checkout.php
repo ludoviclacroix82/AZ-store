@@ -91,22 +91,29 @@ $arrayGender = array(
             </aside>
             <div class="from">
                 <?php
-                $delai = 5;
+                $delai = 8;
                 $url = './';
                 if (!empty($_SESSION['sendMail'])) {
 
                     if ($_SESSION['sendMail'] === 'send') {
                         echo '<div class="alert alert-success" role="alert">Your order has been successfully shipped! You will soon receive an email (<b>' . $_SESSION['email'] . '</b>) with the tracking details.<br>Thank you for your purchase.</div>';
-                        //session_destroy();
-                        //header("Refresh: $delai;url=$url");
+                        header("Refresh: $delai;url=../../");
+
+                        unset($_SESSION['gender']);
+                        unset($_SESSION['name']);
+                        unset($_SESSION['lastName']);
+                        unset($_SESSION['email']);
+                        unset($_SESSION['country']);
+                        unset($_SESSION['city']);
+                        unset($_SESSION['zip']);
+                        unset($_SESSION['adress']);
+                        $_SESSION['sendMail']=='';
                     }
                     if ($_SESSION['sendMail'] === 'noSend') {
                         echo '<div class="alert alert-danger" role="alert">Message could not be sent.</div>';
-                        //session_destroy();
                     }
                     if ($_SESSION['sendMail'] === 'noEmpty') {
                         echo '<div class="alert alert-info" role="alert">Please fill in the mandatory fields. Thank you!</div>';
-                        //session_destroy();
                     }
                 }
 
