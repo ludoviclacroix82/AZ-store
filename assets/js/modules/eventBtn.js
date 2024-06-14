@@ -80,8 +80,6 @@ export const changeQuantityCart = () => {
 
         let resultValue = parseInt(result.value)
 
-
-
         less.addEventListener('click', event => {
             event.preventDefault()
             const elemParent = event.target.parentNode

@@ -104,8 +104,6 @@ function displayCartMini()
                 </div>
                 HTML;
             }
-            $_SESSION['subTotal'] = $subTotal;
-            $_SESSION['shippingTotal'] = $shipping;
         } else {
             echo 'aucun articles';
         }
@@ -127,10 +125,10 @@ function displayCart()
 
         if (isset($_SESSION['cart'])) {
 
-            foreach ($myCart as $key => $value) {                
+            foreach ($myCart as $key => $value) {
 
                 $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
-                $itemTotal = $value *$products[$itemPosition]['price'];
+                $itemTotal = $value * $products[$itemPosition]['price'];
 
                 echo <<<HTML
                 <div class="list" id="{$products[$itemPosition]['id']}">
@@ -163,6 +161,80 @@ function displayCart()
         } else {
             echo 'aucun articles';
         }
+    } catch (\JsonException $exception) {
+        echo $exception->getMessage(); // echoes "Syntax error" 
+    }
+}
+
+function displayRecapCart()
+{
+
+    global $urlJson;
+    $myCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : '';
+
+    try {
+        $productsJson = file_get_contents($urlJson);
+        $products = json_decode($productsJson, true);
+
+        if (isset($_SESSION['cart'])) {
+
+            foreach ($myCart as $key => $value) {
+                $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
+                $products[$itemPosition]['value'] = $value;
+                $items[] = $products[$itemPosition];
+            }
+            return  $items;
+        } else {
+            echo 'aucun articles';
+        }
+    } catch (\JsonException $exception) {
+        echo $exception->getMessage(); // echoes "Syntax error" 
+    }
+}
+function displayRising()
+{
+    global $urlJson;
+    $myCart = isset($_SESSION['cart']) ? $_SESSION['cart'] : '';
+    $subTotal = 0;
+    $shipping = 0;
+    $total = 0;
+    $priceShippinItem = 5;
+
+    try {
+        $productsJson = file_get_contents($urlJson);
+        $products = json_decode($productsJson, true);
+
+        if (isset($_SESSION['cart'])) {
+
+            foreach ($myCart as $key => $value) {
+
+                $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
+                $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
+                $subTotal += $value * $products[$itemPosition]['price'];
+                $shipping += $value * $priceShippinItem;
+                $total += $subTotal + $shipping;
+            }
+        } else {
+            $subTotal = 0;
+            $shipping = 0;
+            $total = 0;
+        }
+        echo <<<HTML
+        <div class="rising">
+                <div class="subtotal">
+                    <h4>Subtotal</h4>
+                    <span>{$subTotal} €</span>
+                </div>
+                <div class="shipping">
+                    <h4>shipping</h4>
+                    <span>{$shipping}  €</span>
+                </div>
+                <div class="total">
+                    <h4>total</h4>
+                    <span>{$total} € </span>
+                </div>
+            </div>
+        HTML;
     } catch (\JsonException $exception) {
         echo $exception->getMessage(); // echoes "Syntax error" 
     }

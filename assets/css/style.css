@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #main-cart #cart .items .list .quantity .add input {
+.poppins-regular, button, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row, #main-cart #cart .items .list .quantity .add input, .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
-.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title, #main-cart #cart .items h2, #main-cart #cart .items .list .name-porduct {
+.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title, #main-cart #cart .items h2, #main-cart #cart .items .list .name-porduct, .cart-mini .rising #main-cart #cart aside .wrap .subtotal h4, .cart-mini .rising #main-cart #cart aside .wrap .shipping h4, .cart-mini .rising #main-cart #cart aside .wrap .total h4, #main-cart #cart aside .wrap .rising .subtotal h4, #main-cart #cart aside .wrap .rising .shipping h4, #main-cart #cart aside .wrap .rising .total h4, #checkout aside .items h3, #checkout aside .items .list .name-porduct {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -611,20 +611,20 @@ header {
             cursor: pointer; }
           .cart-mini .cart-content .cart-item .tools-content .add input[type=text] {
             width: 10px !important; }
-  .cart-mini .rising .subtotal, .cart-mini .rising .shipping, .cart-mini .rising .total {
+  .cart-mini .rising .subtotal, .cart-mini .rising .shipping, .cart-mini .rising .total, .cart-mini #main-cart #cart aside .wrap .rising .subtotal, #main-cart #cart aside .wrap .rising .cart-mini .subtotal, .cart-mini #main-cart #cart aside .wrap .rising .shipping, #main-cart #cart aside .wrap .rising .cart-mini .shipping, .cart-mini #main-cart #cart aside .wrap .rising .total, #main-cart #cart aside .wrap .rising .cart-mini .total {
     width: 90%;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 25px; }
-    .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4 {
+    .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, .cart-mini #main-cart #cart aside .wrap .rising .subtotal h4, #main-cart #cart aside .wrap .rising .cart-mini .subtotal h4, .cart-mini #main-cart #cart aside .wrap .rising .shipping h4, #main-cart #cart aside .wrap .rising .cart-mini .shipping h4, .cart-mini #main-cart #cart aside .wrap .rising .total h4, #main-cart #cart aside .wrap .rising .cart-mini .total h4 {
       width: 70%;
       color: #3779e8;
       font-size: 0.9rem;
       letter-spacing: 0.05rem; }
-      .cart-mini .rising .subtotal h4:first-letter, .cart-mini .rising .shipping h4:first-letter, .cart-mini .rising .total h4:first-letter {
+      .cart-mini .rising .subtotal h4:first-letter, .cart-mini .rising .shipping h4:first-letter, .cart-mini .rising .total h4:first-letter, .cart-mini #main-cart #cart aside .wrap .rising .subtotal h4:first-letter, #main-cart #cart aside .wrap .rising .cart-mini .subtotal h4:first-letter, .cart-mini #main-cart #cart aside .wrap .rising .shipping h4:first-letter, #main-cart #cart aside .wrap .rising .cart-mini .shipping h4:first-letter, .cart-mini #main-cart #cart aside .wrap .rising .total h4:first-letter, #main-cart #cart aside .wrap .rising .cart-mini .total h4:first-letter {
         text-transform: capitalize; }
-    .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span {
+    .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, .cart-mini #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .cart-mini .subtotal span, .cart-mini #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .cart-mini .shipping span, .cart-mini #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising .cart-mini .total span {
       width: 30%;
       text-align: right;
       color: #111827;
@@ -769,20 +769,20 @@ header {
   #main-cart #cart {
     flex-direction: row;
     justify-content: center; }
-    #main-cart #cart .items .header .row, #main-cart #cart .items .list .row {
+    #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row {
       width: 15%;
       color: #7e7e7e;
       font-size: 0.6rem;
       line-height: 0.8rem;
       letter-spacing: 0.1rem;
       text-align: center; }
-    #main-cart #cart .items .header .name-porduct, #main-cart #cart .items .list .name-porduct {
+    #main-cart #cart .items .header .name-porduct, #main-cart #cart .items .list .name-porduct, #checkout aside .items .header #main-cart #cart .name-porduct, #checkout aside .items .list #main-cart #cart .name-porduct {
       width: 45% !important;
       display: flex;
       justify-content: start; }
     #main-cart #cart .items .header .delete, #main-cart #cart .items .list .delete {
       width: 5% !important; }
-    #main-cart #cart .items .header .total, #main-cart #cart .items .list .total {
+    #main-cart #cart .items .header .total, #main-cart #cart .items .list .total, #checkout aside .items .header #main-cart #cart .total, #checkout aside .items .list #main-cart #cart .total {
       width: 10% !important; }
     #main-cart #cart .items {
       width: 60%;
@@ -842,7 +842,138 @@ header {
             #main-cart #cart .items .list .quantity .add input[type=button] {
               cursor: pointer; }
     #main-cart #cart aside {
-      width: 30%; }
+      width: 30%;
+      min-height: 600px;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center; }
+      #main-cart #cart aside .wrap {
+        width: 80%;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 20px 20px;
+        border: 1px solid #ccc; }
+        .cart-mini .rising #main-cart #cart aside .wrap .subtotal, .cart-mini .rising #main-cart #cart aside .wrap .shipping, .cart-mini .rising #main-cart #cart aside .wrap .total, #main-cart #cart aside .wrap .rising .subtotal, #main-cart #cart aside .wrap .rising .shipping, #main-cart #cart aside .wrap .rising .total {
+          width: 90%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 25px;
+          border-bottom: 1px solid #ccc; }
+          .cart-mini .rising #main-cart #cart aside .wrap .subtotal h4, .cart-mini .rising #main-cart #cart aside .wrap .shipping h4, .cart-mini .rising #main-cart #cart aside .wrap .total h4, #main-cart #cart aside .wrap .rising .subtotal h4, #main-cart #cart aside .wrap .rising .shipping h4, #main-cart #cart aside .wrap .rising .total h4 {
+            width: 70%;
+            color: #3779e8;
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem; }
+            .cart-mini .rising #main-cart #cart aside .wrap .subtotal h4:first-letter, .cart-mini .rising #main-cart #cart aside .wrap .shipping h4:first-letter, .cart-mini .rising #main-cart #cart aside .wrap .total h4:first-letter, #main-cart #cart aside .wrap .rising .subtotal h4:first-letter, #main-cart #cart aside .wrap .rising .shipping h4:first-letter, #main-cart #cart aside .wrap .rising .total h4:first-letter {
+              text-transform: capitalize; }
+          .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span {
+            width: 30%;
+            text-align: right;
+            color: #111827;
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem; }
+        #main-cart #cart aside .wrap .rising {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+        #main-cart #cart aside .wrap .button {
+          width: 95%;
+          display: flex;
+          justify-content: right;
+          margin-top: 10px; }
+
+#checkout {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  padding: 80px 40px; }
+  #checkout aside {
+    width: 40%;
+    display: flex;
+    flex-direction: column; }
+    #checkout aside #main-cart #cart .items .header .row, #main-cart #cart .items .header #checkout aside .row, #checkout aside #main-cart #cart .items .list .row, #main-cart #cart .items .list #checkout aside .row, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row {
+      width: 20%;
+      color: #7e7e7e;
+      font-size: 0.6rem;
+      line-height: 0.8rem;
+      letter-spacing: 0.1rem;
+      text-align: center; }
+    #checkout aside #main-cart #cart .items .header .name-porduct, #main-cart #cart .items .header #checkout aside .name-porduct, #checkout aside #main-cart #cart .items .list .name-porduct, #main-cart #cart .items .list #checkout aside .name-porduct, #checkout aside .items .header .name-porduct, #checkout aside .items .list .name-porduct {
+      width: 50% !important;
+      display: flex;
+      justify-content: start; }
+    #checkout aside .items .header .price, #checkout aside .items .list .price {
+      width: 10% !important; }
+    #checkout aside .items .header .quantity, #checkout aside .items .list .quantity {
+      width: 10% !important; }
+    #checkout aside #main-cart #cart .items .header .total, #main-cart #cart .items .header #checkout aside .total, #checkout aside #main-cart #cart .items .list .total, #main-cart #cart .items .list #checkout aside .total, #checkout aside .items .header .total, #checkout aside .items .list .total {
+      width: 10% !important; }
+    #checkout aside .items {
+      width: 100%;
+      min-height: 600px;
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #checkout aside .items h3 {
+        width: 100%;
+        text-align: left;
+        padding: 30px 0px;
+        font-size: 1rem; }
+      #checkout aside .items .header {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc; }
+      #checkout aside .items .list {
+        width: 100%;
+        height: 90px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #ccc;
+        align-items: center; }
+        #checkout aside .items .list .row {
+          font-size: 0.7rem; }
+        #checkout aside .items .list .product {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #checkout aside .items .list .product img {
+            width: 40%;
+            height: 40%;
+            object-fit: cover; }
+        #checkout aside .items .list .name-porduct {
+          color: #3779e8;
+          font-size: 0.7rem;
+          justify-content: left;
+          align-items: center;
+          height: 100%;
+          padding: 20px; }
+        #checkout aside .items .list .quantity {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+      #checkout aside .items .rising {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right; }
+        #checkout aside .items .rising .title {
+          color: #3779e8; }
+        #checkout aside .items .rising .row {
+          font-size: 0.8rem;
+          padding: 5px 0px;
+          text-align: right; }
 
 body {
   background: linear-gradient(0deg, black 0%, #111827 50%, #111827 100%);

@@ -156,10 +156,12 @@
                         font-size: 0.8rem;
 
                     }
-                    input[type=button]{
+
+                    input[type=button] {
                         cursor: pointer;
                     }
-                    input[type=text]{
+
+                    input[type=text] {
                         width: 10px !important;
                     }
                 }
@@ -450,7 +452,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            h2{
+
+            h2 {
                 @extend .poppins-semibold;
                 width: 100%;
                 text-align: left;
@@ -512,7 +515,7 @@
                 .name-porduct {
                     @extend %name-porduct;
                     @extend .poppins-semibold;
-                    color:$primaryColorText;
+                    color: $primaryColorText;
                     font-size: 0.9rem;
                     justify-content: normal;
                     height: 100%;
@@ -526,28 +529,30 @@
                 .total {
                     @extend %total
                 }
+
                 .quantity {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-    
+
                     .disabled {
                         display: none;
                     }
-    
+
                     .add {
                         display: flex;
                         flex-direction: row;
                         width: 60px;
-    
+
                         input {
                             width: 20px;
                             height: 40px;
                             font-size: 0.9rem;
                             @extend .poppins-regular;
-    
+
                         }
-                        input[type=button]{
+
+                        input[type=button] {
                             cursor: pointer;
                         }
                     }
@@ -559,6 +564,249 @@
 
         aside {
             width: 30%;
+            min-height: 600px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+
+            .wrap {
+                width: 80%;
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                padding: 20px 20px;
+                border: 1px solid #ccc;
+
+
+                %rising {
+                    width: 90%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: 25px;
+                    border-bottom: 1px solid #ccc;
+
+                    h4 {
+                        width: 70%;
+                        @extend .poppins-semibold;
+                        color: $primaryColorText;
+                        font-size: 0.9rem;
+                        letter-spacing: 0.05rem;
+
+                        &:first-letter {
+                            text-transform: capitalize;
+                        }
+
+                    }
+
+                    span {
+                        width: 30%;
+                        text-align: right;
+                        @extend .poppins-regular;
+                        color: $cartColorText;
+                        font-size: 0.9rem;
+                        letter-spacing: 0.05rem;
+                    }
+                }
+
+                .rising {
+                    @extend .poppins-regular;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .subtotal {
+                        @extend %rising;
+                    }
+
+                    .shipping {
+                        @extend %rising;
+                    }
+
+                    .total {
+                        @extend %rising;
+                    }
+                }
+
+                .button {
+                    width: 95%;
+                    display: flex;
+                    justify-content: right;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+
+    }
+}
+
+#checkout {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    padding: 80px 40px;
+
+    aside {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        %row {
+            @extend .poppins-regular;
+            width: 20%;
+            color: $bestQualitycolorText;
+            font-size: 0.6rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+
+        %name-porduct {
+            width: 50% !important;
+            display: flex;
+            justify-content: start;
+        }
+
+        %price {
+            width: 10% !important;
+        }
+
+        %quantity {
+            width: 10% !important;
+        }
+
+        %total {
+            width: 10% !important;
+        }
+
+        .items {
+            width: 100%;
+            min-height: 600px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                @extend .poppins-semibold;
+                width: 100%;
+                text-align: left;
+                padding: 30px 0px;
+                font-size: 1rem;
+            }
+
+
+            .header {
+                width: 100%;
+                height: 20px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ccc;
+
+                .row {
+                    @extend %row;
+                }
+
+                .name-porduct {
+                    @extend %name-porduct;
+                }
+
+                .price {
+                    @extend %price;
+                }
+
+                .quantity {
+                    @extend %quantity;
+                }
+
+                .total {
+                    @extend %total;
+                }
+
+            }
+
+            .list {
+                width: 100%;
+                height: 90px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ccc;
+                align-items: center;
+
+                .row {
+                    @extend %row;
+                    font-size: 0.7rem;
+                }
+
+                .product {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 40%;
+                        height: 40%;
+
+                        object-fit: cover;
+                    }
+                }
+
+                .name-porduct {
+                    @extend %name-porduct;
+                    @extend .poppins-semibold;
+                    color: $primaryColorText;
+                    font-size: 0.7rem;
+                    justify-content: left;
+                    align-items: center;
+                    height: 100%;
+                    padding: 20px
+                }
+
+
+                .price {
+                    @extend %price;
+                }
+
+                .quantity {
+                    @extend %quantity;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .total {
+                    @extend %total;
+                }
+
+                .quantity {}
+
+            }
+
+            .rising {
+                width: 100%;
+                height: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+
+                .title {
+                    color: $primaryColorText;
+                }
+
+                .row {
+                    @extend %row;
+                    font-size: 0.8rem;
+                    padding: 5px 0px;
+                    text-align: right;
+                }
+            }
         }
     }
 }

@@ -33,7 +33,14 @@ session_start();
                 <?php echo displayCart(); ?>
             </div>
             <aside>
-
+                <div class="wrap">
+                    <?php echo displayRising(); ?> 
+                    <div class="button">
+                        <a href="../public/checkout.php">
+                            <button>to order</button>
+                        </a>
+                    </div>
+                </div>
             </aside>
         </section>
     </main>
