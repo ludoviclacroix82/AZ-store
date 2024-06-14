@@ -34,12 +34,16 @@ session_start();
             </div>
             <aside>
                 <div class="wrap">
-                    <?php echo displayRising(); ?> 
+                    <?php 
+                        echo displayRising(); 
+                        if(isset($_SESSION['cart'])) :
+                    ?> 
                     <div class="button">
                         <a href="../public/checkout.php">
                             <button>to order</button>
                         </a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </aside>
         </section>
