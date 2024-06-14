@@ -9,9 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script type="module" src="/assets/js/script.js" defer></script>
+    <script type="module" src="/assets/js/cart.js"></script>
     <title>Az-Store : My Cart</title>
 </head>
-
 <body>
     <?php
     require('../views/menu.php');

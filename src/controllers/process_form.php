@@ -31,8 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adress = isset($_POST['adress']) ? htmlspecialchars(trim($_POST['adress'])) : '';
 
 
-
-
     $_SESSION['gender'] = $gender;
     $_SESSION['name'] = $name;
     $_SESSION['lastName'] = $lastName;
@@ -83,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // destroye $_Session
             unset($_SESSION['cart']);
-            
+
             header("Location: $url");
         } catch (Exception $e) {
             //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

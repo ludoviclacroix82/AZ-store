@@ -111,9 +111,11 @@ $arrayGender = array(
                     }
                     if ($_SESSION['sendMail'] === 'noSend') {
                         echo '<div class="alert alert-danger" role="alert">Message could not be sent.</div>';
+                        $_SESSION['sendMail']=='';
                     }
                     if ($_SESSION['sendMail'] === 'noEmpty') {
                         echo '<div class="alert alert-info" role="alert">Please fill in the mandatory fields. Thank you!</div>';
+                        $_SESSION['sendMail']=='';
                     }
                 }
 
