@@ -212,8 +212,9 @@ function displayRising()
                 $itemPosition = $itemPosition = array_search($key, array_column($products, 'id'));
                 $subTotal += $value * $products[$itemPosition]['price'];
                 $shipping += $value * $priceShippinItem;
-                $total += $subTotal + $shipping;
+                
             }
+            $total += $subTotal + $shipping;
         } else {
             $subTotal = 0;
             $shipping = 0;
