@@ -36,7 +36,8 @@ session_start();
                 <div class="wrap">
                     <?php 
                         echo displayRising(); 
-                        if(isset($_SESSION['cart'])) :
+
+                        if(!empty($_SESSION['cart'])) :
                     ?> 
                     <div class="button">
                         <a href="../public/checkout.php">
