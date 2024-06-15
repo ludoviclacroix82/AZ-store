@@ -9,7 +9,7 @@ docker-compose.override.yml
 
 # Ignore le fichier
 docker-compose.yml
-apache.config
+apache.conf
 php.ini
 
 # Ignore les données de volume Docker
