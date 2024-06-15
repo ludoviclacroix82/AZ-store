@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 
 $arrayGender = array(
     '' => 'Select your gender',
@@ -93,10 +94,14 @@ $arrayGender = array(
                 <?php
                 $delai = 8;
                 $url = './';
+
+                $send = !empty($_SESSION['sendMail'])?$_SESSION['sendMail']:'';
                 if (!empty($_SESSION['sendMail'])) {
 
                     if ($_SESSION['sendMail'] === 'send') {
-                        echo '<div class="alert alert-success" role="alert">Your order has been successfully shipped! You will soon receive an email (<b>' . $_SESSION['email'] . '</b>) with the tracking details.<br>Thank you for your purchase.</div>';
+
+                        $email = (!empty($_SESSION['email']))?$_SESSION['email']:'';
+                        echo '<div class="alert alert-success" role="alert">Your order has been successfully shipped! You will soon receive an email (<b>' . $email. '</b>) with the tracking details.<br>Thank you for your purchase.</div>';
                         header("Refresh: $delai;url=../../");
 
                         unset($_SESSION['gender']);

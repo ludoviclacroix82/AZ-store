@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 $url = $_SERVER['HTTP_REFERER']; // url page precedent
 if(isset($_GET['id']) && isset($_SESSION['cart'])){
     $idItem = intval($_GET['id']);

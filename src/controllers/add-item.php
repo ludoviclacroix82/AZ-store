@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 //var_dump($_POST);
 $url = $_SERVER['HTTP_REFERER']; // url page precedent
 $captcha = isset($_POST['spam']) ? htmlspecialchars(trim($_POST['spam'])) : '';
@@ -27,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $captcha === '') {
     }
            
     
-    echo $quantity;
+   // echo $quantity;
     header("Location: {$url}");
     $_SESSION['addItem'] = 'true';
 
