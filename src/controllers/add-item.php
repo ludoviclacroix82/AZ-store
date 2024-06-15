@@ -13,24 +13,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $captcha === '') {
 
 
     if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$idItem])) {
-        
+
         $_SESSION['cart'][$idItem] += intval($qt);
         $quantity  = $_SESSION['cart'][$idItem];
-
     } else {
 
         $_SESSION['cart'][$idItem] =  intval($qt);
     }
 
-   if ($quantity <= 0  && isset($_SESSION['cart'][$idItem])){
-         header("Location: ../../src/controllers/delete-item.php?id={$idItem}");
-         exit();
+    if ($quantity <= 0  && isset($_SESSION['cart'][$idItem])) {
+        header("Location: ../../src/controllers/delete-item.php?id={$idItem}");
+        exit();
     }
-           
-    
-   // echo $quantity;
+
+
+    // echo $quantity;
     header("Location: {$url}");
-    $_SESSION['addItem'] = 'true';
+    if ($qt == '1')
+        $_SESSION['addItem'] = 'true';
+    else
+        $_SESSION['DeleteItem'] = 'true';
 
     //print_r($_SESSION['cart']);
     exit();
