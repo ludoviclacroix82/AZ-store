@@ -98,7 +98,7 @@ $arrayGender = array(
                 $send = !empty($_SESSION['sendMail'])?$_SESSION['sendMail']:'';
                 if (!empty($_SESSION['sendMail'])) {
 
-                    if ($_SESSION['sendMail'] === 'send') {
+                    if ($send  === 'send') {
 
                         $email = (!empty($_SESSION['email']))?$_SESSION['email']:'';
                         echo '<div class="alert alert-success" role="alert">Your order has been successfully shipped! You will soon receive an email (<b>' . $email. '</b>) with the tracking details.<br>Thank you for your purchase.</div>';
@@ -112,15 +112,16 @@ $arrayGender = array(
                         unset($_SESSION['city']);
                         unset($_SESSION['zip']);
                         unset($_SESSION['adress']);
-                        $_SESSION['sendMail']=='';
+                        unset($_SESSION['sendMail']);
+                        
                     }
-                    if ($_SESSION['sendMail'] === 'noSend') {
+                    if ($send  === 'noSend') {
                         echo '<div class="alert alert-danger" role="alert">Message could not be sent.</div>';
-                        $_SESSION['sendMail']=='';
+                        unset($_SESSION['sendMail']);
                     }
-                    if ($_SESSION['sendMail'] === 'noEmpty') {
+                    if ($send  === 'noEmpty') {
                         echo '<div class="alert alert-info" role="alert">Please fill in the mandatory fields. Thank you!</div>';
-                        $_SESSION['sendMail']=='';
+                        unset($_SESSION['sendMail']);
                     }
                 }
 
