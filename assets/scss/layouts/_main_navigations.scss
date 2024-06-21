@@ -7,12 +7,22 @@ nav {
     justify-content: center;
     align-items: center;
 
+    @include mobile{
+        height: 100px;
+        display: grid;
+        grid-template: 'Logo  Tools' 'Links Links';  
+    }
+
     .logo {
         width: 20%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile{
+            grid-area: Logo;
+            width: 100%;
+        }
 
         h2 {
             @extend .poppins-semibold;
@@ -27,6 +37,10 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile{
+            grid-area: Links;
+            width: 100%;
+        }
 
         a {
             @extend .poppins-regular;
@@ -50,6 +64,11 @@ nav {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        @include mobile{
+            grid-area: Tools;
+            width: 100%;
+        }
 
         .tools-cart {
             width: 50%;

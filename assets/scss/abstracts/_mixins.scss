@@ -1,0 +1,13 @@
+// Mixin pour les styles mobiles
+@mixin mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  
+  // Mixin pour les styles tablette
+  @mixin tablet {
+    @media only screen and (max-width: 1104px) {
+      @content;
+    }
+  }

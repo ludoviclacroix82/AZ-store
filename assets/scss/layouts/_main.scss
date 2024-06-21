@@ -240,6 +240,14 @@
             gap: 30px;
             padding: 20px 0px;
 
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
             .item {
                 width: 280px;
                 height: 300px;
@@ -247,6 +255,14 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
 
                 .item-image {
                     padding: 10px;
@@ -262,10 +278,22 @@
                     -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
                     box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
 
+                    @include tablet {
+                        width: 90%;
+                    }
+
+                    @include mobile {
+                        width: 90%;
+                    }
+
                     img {
                         width: 50%;
                         height: 80%;
                         object-fit: cover;
+
+                        @include tablet {
+                            width: auto;
+                        }
                     }
                 }
 
@@ -279,6 +307,14 @@
                     color: $secondaryColorText;
                     font-size: 0.9rem;
                     font-weight: lighter;
+
+                    @include tablet {
+                        width: 90%;
+                    }
+
+                    @include mobile {
+                        width: 90%;
+                    }
 
                     .item-info {
                         width: 60%;
@@ -323,6 +359,10 @@
         flex-direction: column;
         align-items: center;
 
+        @include mobile {
+            width: 90%;
+        }
+
         .image {
             display: flex;
             align-items: center;
@@ -330,6 +370,10 @@
 
             img {
                 width: 40%;
+
+                @include mobile {
+                    width: 60%;
+                }
             }
         }
 
@@ -340,6 +384,13 @@
             font-size: 3rem;
             line-height: 3rem;
             letter-spacing: 0.1rem;
+
+            @include mobile {
+                margin-top: 50px;
+                font-size: 1.8rem;
+                line-height: 1.9rem;
+                letter-spacing: 0.1rem;
+            }
 
             span {
                 color: $primaryColorText;
@@ -354,6 +405,13 @@
             line-height: 0.8rem;
             letter-spacing: 0.1rem;
             text-align: center;
+
+            @include mobile {
+                width: 80%;
+                font-size: 0.7rem;
+                line-height: 1rem;
+            }
+
 
             &::first-letter {
                 text-transform: capitalize;
@@ -372,6 +430,10 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
 
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         .card-user {
             display: flex;
             justify-content: center;
@@ -381,6 +443,11 @@
                 height: 25%;
                 object-fit: cover;
                 border-radius: 50%;
+
+                @include mobile {
+                    width: 35%;
+                    height: 35%;
+                }
             }
         }
 
@@ -392,6 +459,10 @@
             letter-spacing: 0.1rem;
             text-align: center;
             padding: 10px 0px;
+
+            @include mobile {
+                font-size: 0.7rem;
+            }
 
             &::first-letter {
                 text-transform: capitalize;
@@ -405,6 +476,11 @@
             line-height: 0.8rem;
             letter-spacing: 0.1rem;
             text-align: center;
+
+            @include mobile {
+                font-size: 0.7rem;
+                text-align: justify;
+            }
 
             &::first-letter {
                 text-transform: capitalize;
@@ -421,6 +497,10 @@
         flex-direction: row;
         justify-content: center;
 
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+
         %row {
             @extend .poppins-regular;
             width: 15%;
@@ -429,6 +509,12 @@
             line-height: 0.8rem;
             letter-spacing: 0.1rem;
             text-align: center;
+
+            @include mobile {
+                font-size: 0.7rem;
+                text-align: left;
+                text-align: left;
+            }
         }
 
         %name-porduct {
@@ -453,6 +539,12 @@
             flex-direction: column;
             align-items: center;
 
+            @include mobile {
+                width: 90%;
+                min-height: 60dvh;
+                margin-top: 10px;
+            }
+
             h2 {
                 @extend .poppins-semibold;
                 width: 100%;
@@ -472,6 +564,12 @@
                     @extend %row;
                 }
 
+                .product {
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
                 .name-porduct {
                     @extend %name-porduct;
                 }
@@ -481,7 +579,12 @@
                 }
 
                 .total {
-                    @extend %total
+                    @extend %total;
+
+                    @include mobile {
+                        width: 20% !important;
+                        text-align: right;
+                    }
                 }
 
             }
@@ -504,6 +607,10 @@
                     justify-content: center;
                     align-items: center;
 
+                    @include mobile {
+                        display: none;
+                    }
+
                     img {
                         width: 40%;
                         height: 40%;
@@ -519,15 +626,33 @@
                     font-size: 0.9rem;
                     justify-content: normal;
                     height: 100%;
-                    padding: 20px
+                    padding: 20px;
+
+                    @include mobile {
+                        padding: 0px;
+                        align-items: center;
+                    }
+
                 }
 
                 .delete {
-                    @extend %delete
+                    @extend %delete;
+
+                    @include mobile {
+                        width: 10% !important;
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
 
                 .total {
-                    @extend %total
+                    @extend %total;
+
+                    @include mobile {
+                        width: 20% !important;
+                        text-align: right;
+                    }
+
                 }
 
                 .quantity {
@@ -570,6 +695,12 @@
             flex-direction: column;
             justify-content: start;
             align-items: center;
+
+            @include mobile {
+                width: 100%;
+                min-height: 100%;
+                margin-top: 20px;
+            }
 
             .wrap {
                 width: 80%;
@@ -653,10 +784,28 @@
     flex-direction: row;
     padding: 80px 40px;
 
+    @include tablet {
+        width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 20px 10px;
+    }
+
     aside {
         width: 40%;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
 
         %row {
             @extend .poppins-regular;
@@ -676,14 +825,26 @@
 
         %price {
             width: 10% !important;
+
+            @include mobile {
+                width: 20% !important;
+            }
         }
 
         %quantity {
             width: 10% !important;
+
+            @include mobile {
+                width: 20% !important;
+            }
         }
 
         %total {
             width: 10% !important;
+
+            @include mobile {
+                width: 20% !important;
+            }
         }
 
         .items {
@@ -715,6 +876,12 @@
 
                 .row {
                     @extend %row;
+                }
+
+                .product {
+                    @include mobile {
+                        display: none;
+                    }
                 }
 
                 .name-porduct {
@@ -753,6 +920,10 @@
                     justify-content: center;
                     align-items: center;
 
+                    @include mobile {
+                        display: none;
+                    }
+
                     img {
                         width: 40%;
                         height: 40%;
@@ -769,7 +940,12 @@
                     justify-content: left;
                     align-items: center;
                     height: 100%;
-                    padding: 20px
+                    padding: 20px;
+
+                    @include mobile {
+                        padding: 0px;
+                        text-align: left
+                    }
                 }
 
 
@@ -787,8 +963,6 @@
                 .total {
                     @extend %total;
                 }
-
-                .quantity {}
 
             }
 
@@ -816,6 +990,14 @@
     .from {
         width: 60%;
 
+        @include tablet {
+            width: 40%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
         #myForm {
             width: 80%;
             min-height: 600px;
@@ -823,6 +1005,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            @include mobile {
+                width: 100%;
+                min-height: 100px;
+                margin-top: 10px;
+            }
 
             input,
             select {
@@ -858,6 +1050,14 @@
                 display: flex;
                 flex-direction: column;
                 padding: 10px 20px;
+
+                @include tablet {
+                    width: 100%;
+                }
+
+                @include mobile {
+                    width: 100%;
+                }
 
                 .error {
                     @extend .poppins-regular;

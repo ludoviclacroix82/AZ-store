@@ -14,12 +14,22 @@ header {
         justify-content: center;
         align-items: center;
 
+        @include mobile{
+            width: 90%;
+            flex-direction: column-reverse;
+        }
+
         .slogan {
             width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            @include mobile{
+                width: 70%;
+                margin-top: 50px;
+            }
 
             h2 {
                 @extend .poppins-semibold;
@@ -30,6 +40,13 @@ header {
                 line-height: 4rem;
                 letter-spacing: 0.3rem;
 
+                @include mobile{
+                    text-align: justify;
+                    font-size: 2.5em;
+                    line-height: 3rem;
+                    letter-spacing: 0.3rem;
+                }
+
                 span {
                     color: $primaryColorText;
                 }
@@ -39,6 +56,11 @@ header {
                 width: 100%;
                 display: flex;
                 align-items: baseline;
+                @include mobile{
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 button {
                     background: linear-gradient(90deg,$btnBgColor, #1e3b8a );
@@ -54,6 +76,10 @@ header {
             flex-direction: row;
             justify-content: center;
             align-items: center;
+
+            @include mobile{
+                width: 90%;
+            }
 
             img {
                 width: 70%;
