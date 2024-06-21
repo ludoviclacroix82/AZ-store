@@ -7,9 +7,10 @@ $urlJson = $_SERVER['DOCUMENT_ROOT'] . '/assets/json/products.json';
  * Affiche les Items via le json
  * @return void
  */
-function displayProducts()
+function displayProducts(string $numberItem)
 {
     global $urlJson;
+    $count = 0;
 
     try {
         $productsJson = file_get_contents($urlJson);
@@ -18,6 +19,11 @@ function displayProducts()
 
         foreach ($products as $product) {
 
+            if ($numberItem != 'null') {
+                if ($count === intval($numberItem)) {
+                    break;
+                }
+            }            
 
             echo <<<HTML
                 <div class="item" id="{$product['id']}">
@@ -30,7 +36,7 @@ function displayProducts()
                             {$product['price']}€
                         </div>
                         <div class="button">
-                            <form method="post" action="./src/controllers/add-item.php">
+                            <form method="post" action="/src/controllers/add-item.php">
                                 <input class="disabled" type="number" name="idItem" id="IdItem" value="{$product['id']}" >
                                 <input class="disabled" type="text" name="spam" id="spam">
                                 <input class="disabled" type="number" name="qt" id="qt" value="1">
@@ -40,6 +46,8 @@ function displayProducts()
                     </div>
                 </div>
                 HTML;
+
+        $count ++;
         }
     } catch (\JsonException $exception) {
         echo $exception->getMessage(); // echoes "Syntax error" 

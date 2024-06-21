@@ -2,7 +2,7 @@
     <div class="links">
         <a href="/">Home</a>
         <a href="/">About</a>
-        <a href="/">Products</a>
+        <a href="/src/public/products.php">Products</a>
         <a href="../src/public/mycart.php">My cart</a>
         <a href="/">Contact</a>
     </div>

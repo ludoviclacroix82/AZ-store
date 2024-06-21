@@ -230,124 +230,127 @@
     }
 }
 
+%items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px 0px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .item {
+        width: 280px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .item-image {
+            padding: 10px;
+            width: 280px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background-color: $bgItemImage;
+            padding: 5px;
+            -webkit-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+
+            @include tablet {
+                width: 90%;
+            }
+
+            @include mobile {
+                width: 90%;
+            }
+
+            img {
+                width: 50%;
+                height: 80%;
+                object-fit: cover;
+
+                @include tablet {
+                    width: auto;
+                }
+            }
+        }
+
+        .item-content {
+            @extend .poppins-regular;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            color: $secondaryColorText;
+            font-size: 0.9rem;
+            font-weight: lighter;
+
+            @include tablet {
+                width: 90%;
+            }
+
+            @include mobile {
+                width: 90%;
+            }
+
+            .item-info {
+                width: 60%;
+
+                h3 {
+                    @extend .poppins-semibold;
+                    width: 100%;
+                    color: $secondaryColorText;
+                    font-size: 0.8rem;
+                    margin-bottom: 2px
+                }
+            }
+
+            .button {
+                width: 40%;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+
+                .disabled {
+                    display: none;
+                }
+
+                button {
+                    width: 90px !important;
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
 #last-products {
     @extend %section;
 
     .wrap {
-        width: 80%;
+        width: 90%;
 
-        .items {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 20px 0px;
-
-            @include tablet {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            @include mobile {
-                grid-template-columns: repeat(1, 1fr);
-            }
-
-            .item {
-                width: 280px;
-                height: 300px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                @include tablet {
-                    width: 100%;
-                }
-
-                @include mobile {
-                    width: 100%;
-                }
-
-                .item-image {
-                    padding: 10px;
-                    width: 280px;
-                    height: 180px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 5px;
-                    background-color: $bgItemImage;
-                    padding: 5px;
-                    -webkit-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
-                    -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
-                    box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
-
-                    @include tablet {
-                        width: 90%;
-                    }
-
-                    @include mobile {
-                        width: 90%;
-                    }
-
-                    img {
-                        width: 50%;
-                        height: 80%;
-                        object-fit: cover;
-
-                        @include tablet {
-                            width: auto;
-                        }
-                    }
-                }
-
-                .item-content {
-                    @extend .poppins-regular;
-                    width: 100%;
-                    height: 60px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: end;
-                    color: $secondaryColorText;
-                    font-size: 0.9rem;
-                    font-weight: lighter;
-
-                    @include tablet {
-                        width: 90%;
-                    }
-
-                    @include mobile {
-                        width: 90%;
-                    }
-
-                    .item-info {
-                        width: 60%;
-
-                        h3 {
-                            @extend .poppins-semibold;
-                            width: 100%;
-                            color: $secondaryColorText;
-                            font-size: 0.8rem;
-                            margin-bottom: 2px
-                        }
-                    }
-
-                    .button {
-                        width: 40%;
-                        display: flex;
-                        justify-content: right;
-                        align-items: center;
-
-                        .disabled {
-                            display: none;
-                        }
-
-                        button {
-                            width: 90px !important;
-                            font-size: 0.6rem;
-                        }
-                    }
-                }
-            }
+        .items{
+            @extend %items;
         }
     }
 }
@@ -1105,6 +1108,18 @@
                 }
 
             }
+        }
+    }
+}
+
+#products{
+    @extend %section;
+    margin-top: 50px;
+    .wrap {
+        width: 90%;
+
+        .items{
+            @extend %items;
         }
     }
 }

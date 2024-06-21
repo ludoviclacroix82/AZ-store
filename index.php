@@ -38,7 +38,7 @@ session_start();
                 <h3><span>our</span> last products</h3>
                 <div class="items">
                     <?php
-                    displayProducts();
+                    displayProducts(4);
                     ?>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-.poppins-regular, button, .alert-item, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row, #main-cart #cart .items .list .quantity .add input, .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row, #checkout .from #myForm ::placeholder, #checkout .from #myForm .form-group .error, #checkout .from #myForm .form-group label {
+.poppins-regular, button, .alert-item, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row, #main-cart #cart .items .list .quantity .add input, .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row, #checkout .from #myForm ::placeholder, #checkout .from #myForm .form-group .error, #checkout .from #myForm .form-group label {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal; }
 
-.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title, #main-cart #cart .items h2, #main-cart #cart .items .list .name-porduct, .cart-mini .rising #main-cart #cart aside .wrap .subtotal h4, .cart-mini .rising #main-cart #cart aside .wrap .shipping h4, .cart-mini .rising #main-cart #cart aside .wrap .total h4, #main-cart #cart aside .wrap .rising .subtotal h4, #main-cart #cart aside .wrap .rising .shipping h4, #main-cart #cart aside .wrap .rising .total h4, #checkout aside .items h3, #checkout aside .items .list .name-porduct {
+.poppins-semibold, nav .logo h2, header .wrap .slogan h2, #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, #products h3, .cart-mini .cart-header .header-title, .cart-mini .cart-header .header-close, .cart-mini .rising .subtotal h4, .cart-mini .rising .shipping h4, .cart-mini .rising .total h4, #last-products .wrap .items .item .item-content .item-info h3, #products .wrap .items .item .item-content .item-info h3, #best-quality .wrap .title, #main-cart #cart .items h2, #main-cart #cart .items .list .name-porduct, .cart-mini .rising #main-cart #cart aside .wrap .subtotal h4, .cart-mini .rising #main-cart #cart aside .wrap .shipping h4, .cart-mini .rising #main-cart #cart aside .wrap .total h4, #main-cart #cart aside .wrap .rising .subtotal h4, #main-cart #cart aside .wrap .rising .shipping h4, #main-cart #cart aside .wrap .rising .total h4, #checkout aside .items h3, #checkout aside .items .list .name-porduct {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal; }
@@ -582,18 +582,18 @@ header {
       header .wrap .slogan-image img {
         width: 70%; }
 
-#last-products, #best-quality, #testimonials, #main-cart #cart {
+#last-products, #best-quality, #testimonials, #main-cart #cart, #products {
   width: 100%;
   min-height: 200px;
   display: flex;
   justify-content: center;
   align-items: center; }
-  #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3 {
+  #last-products h3, #best-quality h3, #testimonials h3, #main-cart #cart h3, #products h3 {
     color: #fff;
     font-size: 1.1rem; }
-    #last-products h3::first-letter, #best-quality h3::first-letter, #testimonials h3::first-letter, #main-cart #cart h3::first-letter {
+    #last-products h3::first-letter, #best-quality h3::first-letter, #testimonials h3::first-letter, #main-cart #cart h3::first-letter, #products h3::first-letter {
       text-transform: capitalize; }
-    #last-products h3 span, #best-quality h3 span, #testimonials h3 span, #main-cart #cart h3 span {
+    #last-products h3 span, #best-quality h3 span, #testimonials h3 span, #main-cart #cart h3 span, #products h3 span {
       color: #3779e8; }
 
 .open-cart-mini {
@@ -735,91 +735,92 @@ header {
     justify-content: right;
     margin-top: 10px; }
 
-#last-products .wrap {
-  width: 80%; }
-  #last-products .wrap .items {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 20px 0px; }
+#last-products .wrap .items, #products .wrap .items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 20px 0px; }
+  @media only screen and (max-width: 1104px) {
+    #last-products .wrap .items, #products .wrap .items {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media only screen and (max-width: 767px) {
+    #last-products .wrap .items, #products .wrap .items {
+      grid-template-columns: repeat(1, 1fr); } }
+  #last-products .wrap .items .item, #products .wrap .items .item {
+    width: 280px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     @media only screen and (max-width: 1104px) {
-      #last-products .wrap .items {
-        grid-template-columns: repeat(2, 1fr); } }
+      #last-products .wrap .items .item, #products .wrap .items .item {
+        width: 100%; } }
     @media only screen and (max-width: 767px) {
-      #last-products .wrap .items {
-        grid-template-columns: repeat(1, 1fr); } }
-    #last-products .wrap .items .item {
+      #last-products .wrap .items .item, #products .wrap .items .item {
+        width: 100%; } }
+    #last-products .wrap .items .item .item-image, #products .wrap .items .item .item-image {
+      padding: 10px;
       width: 280px;
-      height: 300px;
+      height: 180px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      border-radius: 5px;
+      background-color: #151c2b;
+      padding: 5px;
+      -webkit-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75); }
       @media only screen and (max-width: 1104px) {
-        #last-products .wrap .items .item {
-          width: 100%; } }
+        #last-products .wrap .items .item .item-image, #products .wrap .items .item .item-image {
+          width: 90%; } }
       @media only screen and (max-width: 767px) {
-        #last-products .wrap .items .item {
-          width: 100%; } }
-      #last-products .wrap .items .item .item-image {
-        padding: 10px;
-        width: 280px;
-        height: 180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        background-color: #151c2b;
-        padding: 5px;
-        -webkit-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 34px -13px rgba(0, 0, 0, 0.75); }
+        #last-products .wrap .items .item .item-image, #products .wrap .items .item .item-image {
+          width: 90%; } }
+      #last-products .wrap .items .item .item-image img, #products .wrap .items .item .item-image img {
+        width: 50%;
+        height: 80%;
+        object-fit: cover; }
         @media only screen and (max-width: 1104px) {
-          #last-products .wrap .items .item .item-image {
-            width: 90%; } }
-        @media only screen and (max-width: 767px) {
-          #last-products .wrap .items .item .item-image {
-            width: 90%; } }
-        #last-products .wrap .items .item .item-image img {
-          width: 50%;
-          height: 80%;
-          object-fit: cover; }
-          @media only screen and (max-width: 1104px) {
-            #last-products .wrap .items .item .item-image img {
-              width: auto; } }
-      #last-products .wrap .items .item .item-content {
-        width: 100%;
-        height: 60px;
+          #last-products .wrap .items .item .item-image img, #products .wrap .items .item .item-image img {
+            width: auto; } }
+    #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      flex-direction: row;
+      align-items: end;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: lighter; }
+      @media only screen and (max-width: 1104px) {
+        #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content {
+          width: 90%; } }
+      @media only screen and (max-width: 767px) {
+        #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content {
+          width: 90%; } }
+      #last-products .wrap .items .item .item-content .item-info, #products .wrap .items .item .item-content .item-info {
+        width: 60%; }
+        #last-products .wrap .items .item .item-content .item-info h3, #products .wrap .items .item .item-content .item-info h3 {
+          width: 100%;
+          color: #fff;
+          font-size: 0.8rem;
+          margin-bottom: 2px; }
+      #last-products .wrap .items .item .item-content .button, #products .wrap .items .item .item-content .button {
+        width: 40%;
         display: flex;
-        flex-direction: row;
-        align-items: end;
-        color: #fff;
-        font-size: 0.9rem;
-        font-weight: lighter; }
-        @media only screen and (max-width: 1104px) {
-          #last-products .wrap .items .item .item-content {
-            width: 90%; } }
-        @media only screen and (max-width: 767px) {
-          #last-products .wrap .items .item .item-content {
-            width: 90%; } }
-        #last-products .wrap .items .item .item-content .item-info {
-          width: 60%; }
-          #last-products .wrap .items .item .item-content .item-info h3 {
-            width: 100%;
-            color: #fff;
-            font-size: 0.8rem;
-            margin-bottom: 2px; }
-        #last-products .wrap .items .item .item-content .button {
-          width: 40%;
-          display: flex;
-          justify-content: right;
-          align-items: center; }
-          #last-products .wrap .items .item .item-content .button .disabled {
-            display: none; }
-          #last-products .wrap .items .item .item-content .button button {
-            width: 90px !important;
-            font-size: 0.6rem; }
+        justify-content: right;
+        align-items: center; }
+        #last-products .wrap .items .item .item-content .button .disabled, #products .wrap .items .item .item-content .button .disabled {
+          display: none; }
+        #last-products .wrap .items .item .item-content .button button, #products .wrap .items .item .item-content .button button {
+          width: 90px !important;
+          font-size: 0.6rem; }
+
+#last-products .wrap {
+  width: 90%; }
 
 #best-quality .wrap {
   margin-top: 50px;
@@ -1283,6 +1284,11 @@ header {
             width: 30%; }
         #checkout .from #myForm .form-group #website {
           display: none; }
+
+#products {
+  margin-top: 50px; }
+  #products .wrap {
+    width: 90%; }
 
 body {
   background: linear-gradient(0deg, black 0%, #111827 50%, #111827 100%);
