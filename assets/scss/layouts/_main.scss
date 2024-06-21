@@ -785,7 +785,7 @@
 }
 
 #checkout {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     padding: 80px 40px;
@@ -801,7 +801,7 @@
     }
 
     aside {
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: column;
 
@@ -994,7 +994,7 @@
     }
 
     .from {
-        width: 60%;
+        width: 50%;
 
         @include tablet {
             width: 40%;
@@ -1005,12 +1005,13 @@
         }
 
         #myForm {
-            width: 80%;
+            width: 90%;
             min-height: 600px;
             margin-top: 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
             @include tablet {
                 width: 100%;
