@@ -600,6 +600,10 @@ header {
   right: 0px !important;
   transition: right 0.8s ease-in; }
 
+.open-cartmini {
+  right: 0px !important;
+  transition: none !important; }
+
 .cart-mini {
   z-index: 6;
   position: fixed;

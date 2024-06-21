@@ -117,14 +117,15 @@ export const openCart = () => {
     const openCartStorage = getItem('openCart')
 
     if (openCartStorage === true)
-        cartMini.classList.add('open-cart-mini')
+        cartMini.classList.add('open-cartmini')
     else
-        cartMini.classList.remove('open-cart-mini')
+        cartMini.classList.remove('open-cartmini')
 
     const openCartMiniEvent = () =>{
 
         if (cartMini.classList.contains('open-cart-mini')) {
             cartMini.classList.remove('open-cart-mini')
+            cartMini.classList.remove('open-cartmini')
             setItem('openCart', false)
         } else {
             cartMini.classList.add('open-cart-mini')

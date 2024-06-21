@@ -24,7 +24,10 @@
     right: 0px !important;
     transition: right 0.8s ease-in;
 }
-
+.open-cartmini {
+    right: 0px !important;
+    transition: none !important;
+}
 .cart-mini {
     //display: none;
     z-index: 6;
