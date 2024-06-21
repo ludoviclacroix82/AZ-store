@@ -820,7 +820,8 @@ header {
           font-size: 0.6rem; }
 
 #last-products .wrap {
-  width: 90%; }
+  width: 90%;
+  margin-top: 50px; }
 
 #best-quality .wrap {
   margin-top: 50px;

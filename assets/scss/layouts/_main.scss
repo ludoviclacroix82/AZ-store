@@ -348,6 +348,7 @@
 
     .wrap {
         width: 90%;
+        margin-top: 50px;
 
         .items{
             @extend %items;
