@@ -6,6 +6,7 @@
     border: 1px solid transparent;
     border-radius: 0.25rem;
     margin: 0 auto;
+    animation: fadeOut 3s linear forwards;
 }
 
 .alert-info {
@@ -33,4 +34,27 @@
     font-size: 0.6rem;
     line-height: 0.8rem;
     letter-spacing: 0.1rem;
+}
+
+@keyframes fadeOut {
+    0% {
+        display: flex;
+        left: -250px;
+
+    }
+
+    25% {
+        left: 20px;
+    }
+
+    75% {
+        //opacity: 1;
+        left: 20px;
+    }
+
+    100% {
+        display: none;
+        //opacity: 0;
+        left: -250px;
+    }
 }
