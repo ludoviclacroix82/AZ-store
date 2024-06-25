@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
-.poppins-regular, button, .alert-item, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row, #main-cart #cart .items .list .quantity .add input, .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row, #checkout .from #myForm ::placeholder, #checkout .from #myForm .form-group .error, #checkout .from #myForm .form-group label {
+.poppins-regular, button, .alert-item, .info-item, nav .links a, nav .tools .tools-cart .item-number, nav .tools .tools-login a, footer .links a, .cart-mini .cart-content .cart-item .cart-info .title, .cart-mini .cart-content .cart-item .cart-info .price, .cart-mini .rising .subtotal span, .cart-mini .rising .shipping span, .cart-mini .rising .total span, #last-products .wrap .items .item .item-content, #products .wrap .items .item .item-content, #best-quality .wrap .info, #testimonials .cards .card-name, #testimonials .cards .card-content, #main-cart #cart .items .header .row, #main-cart #cart .items .list .row, #checkout aside .items .header #main-cart #cart .row, #checkout aside .items .list #main-cart #cart .row, #main-cart #cart #checkout aside .items .rising .row, #checkout aside .items .rising #main-cart #cart .row, #main-cart #cart .items .list .quantity .add input, .cart-mini .rising #main-cart #cart aside .wrap .subtotal span, .cart-mini .rising #main-cart #cart aside .wrap .shipping span, .cart-mini .rising #main-cart #cart aside .wrap .total span, #main-cart #cart aside .wrap .rising .subtotal span, #main-cart #cart aside .wrap .rising .shipping span, #main-cart #cart aside .wrap .rising .total span, #main-cart #cart aside .wrap .rising, #checkout aside .items .header .row, #checkout aside .items .list .row, #checkout aside .items .rising .row, #checkout .from #myForm ::placeholder, #checkout .from #myForm .form-group .error, #checkout .from #myForm .form-group label {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal; }
@@ -358,8 +358,7 @@ button {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  margin: 0 auto;
-  animation: fadeOut 3s linear forwards; }
+  margin: 0 auto; }
 
 .alert-info {
   color: #0c5460;
@@ -377,6 +376,35 @@ button {
   border-color: #c3e6cb; }
 
 .alert-item {
+  width: 250px;
+  position: fixed !important;
+  top: 20px;
+  left: 20px;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  letter-spacing: 0.1rem; }
+
+.info {
+  position: relative;
+  width: 80%;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  animation: fadeOut 3s linear forwards; }
+
+.info-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb; }
+
+.info-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb; }
+
+.info-item {
   width: 250px;
   position: fixed !important;
   top: 20px;

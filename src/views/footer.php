@@ -7,13 +7,13 @@
         <a href="/">Contact</a>
     </div>
     <?php if (!empty($_SESSION['addItem']) === true) : ?>
-        <div class="alert alert-success alert-item" id="successAlert">Your product has been successfully added to the cart!</div>
+        <div class="info info-success info-item" id="successAlert">Your product has been successfully added to the cart!</div>
         <?php
         unset($_SESSION['addItem']);
         ?>
     <?php endif; ?>
     <?php if (!empty($_SESSION['DeleteItem']) == true) : ?>
-        <div class="alert alert-danger alert-item" id="deleteAlert">Your product has been successfully deleted to the cart!</div>
+        <div class="info info-danger info-item" id="deleteAlert">Your product has been successfully deleted to the cart!</div>
         <?php
         unset($_SESSION['DeleteItem']);
         ?>
